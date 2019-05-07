@@ -1,0 +1,13 @@
+server:
+  port: 9993   #本地集群两台9991、9992.9993
+  servlet:
+    context-path: /
+
+eureka:
+  instance:
+    appname: eureka-server
+  client:
+    fetch-registry: false
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9992/eureka,http://127.0.0.1:9991/eureka
